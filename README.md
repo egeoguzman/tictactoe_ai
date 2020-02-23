@@ -1,6 +1,15 @@
-Tic Tac Toe AI (Minimax Algorithm)
+<h2>Tic Tac Toe AI (Minimax Algorithm)</h2>
 
-AI plays tic tac toe with minimax algorithm.
+<h4>AI plays tic tac toe with minimax algorithm.</h4>
+
+![Screen Shot 2020-02-23 at 23 27 41](https://user-images.githubusercontent.com/32989239/75119485-415d3f00-5694-11ea-9c8e-a1bcd4b86b9d.png)
+
+<hr>
+
+![Screen Shot 2020-02-23 at 23 28 17](https://user-images.githubusercontent.com/32989239/75119484-402c1200-5694-11ea-8744-a03cd9be71fc.png)
+<br></br>
+
+
 
 <h3>*Create the game:board.py</h3>
 
