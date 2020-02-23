@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>
+      Tic Tac Toe
+    </title>
+
+    <link rel="stylesheet" href="static/colors.css"/>
+    <link rel="stylesheet" href="static/style.css"/>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="bigtitle"><span class="aqua">Tic</span> Tac <span class="green">Toe</span></h1>
+      <br/><br/>
+      <table id="game-grid" class="centered">
+	{% for row in range(3)%}
+	{% set outer_loop = row %}
+	<tr>
+	  {% for col in range(3) %}
+	  <td>
+	    {% if board[row][col] == 1 %}
+	    	<div class="game-piece-empty">
+	    		<img height="100%" width="100%" src="{{url_for('static', filename='x_symbol.png')}}" />
+	    	</div>
+	    {% elif board[row][col] == 2 %}
+	    	<div class="game-piece-empty">
+	    		<img height="100%" width="100%" src="{{url_for('static', filename='o_symbol.png')}}" />
+	    	</div>
+	    {% else %}
+	    	<div class="game-piece-empty" id="piece">
+	    	</div>
+	    {% endif %}
+	  </td>
+	  {% endfor %}
+	</tr>
+	{% endfor %}
+    </table>
+    <br/><br/>
+    <form action="turn" method="POST">
+    	<input type="text" name="row" placeholder="Row Number" required/>
+    	<input type="text" name="col" placeholder="Column Number" required/>
+		<button name="play" type="submit">Play Turn!</button>
+	</form>
+	<br/><br/>
+    <form action="/">
+		<button name="play" type="submit">Restart Game!</button>
+	</form>
+    <div class="top-padded">
+   </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ </body>
